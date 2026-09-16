@@ -177,8 +177,11 @@ section{scroll-margin-top:100px}
 
 /* ---------- CHIPS (marquee) ---------- */
 .chips-band{padding:54px 0;overflow:hidden}
-.chip-viewport{margin-top:24px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
-.chip-track{display:flex;gap:12px;width:max-content;animation:chip-scroll 32s linear infinite}
+.chip-viewport{position:relative;margin-top:24px;overflow:hidden}
+.chip-viewport::before,.chip-viewport::after{content:"";position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
+.chip-viewport::before{left:0;background:linear-gradient(90deg,#fff,rgba(255,255,255,0))}
+.chip-viewport::after{right:0;background:linear-gradient(270deg,#fff,rgba(255,255,255,0))}
+.chip-track{display:flex;gap:12px;width:max-content;animation:chip-scroll 32s linear infinite;will-change:transform;transform:translateZ(0);backface-visibility:hidden}
 @media (hover:hover) and (pointer:fine){.chip-viewport:hover .chip-track{animation-play-state:paused}}
 @keyframes chip-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .chip{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 18px 10px 10px;font-size:13px;font-weight:600;white-space:nowrap}
@@ -343,7 +346,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
   .hero h1{font-size:30px}
   .hero .lede{font-size:13px}
 }
-@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important} .chip-track{animation:chip-scroll 32s linear infinite!important}}
 
 @media print{
   .nav,.nav-scrim,.burger,.section-dots,.to-top,.lightbox,.filter-row,.chip-track{display:none!important}
