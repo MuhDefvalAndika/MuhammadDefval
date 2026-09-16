@@ -31,7 +31,7 @@
     "addressLocality": "Bandung",
     "addressCountry": "ID"
   },
-  "email": "mailto:defvalnahdan@gmail.com",
+  "email": "mailto:defvalhandan@gmail.com",
   "knowsAbout": ["Internet of Things", "Industrial Automation", "Computer Vision", "Machine Learning", "Computer Networking", "Web Development"]
 }
 </script>
@@ -105,8 +105,8 @@ section{scroll-margin-top:100px}
 .section-dots a:hover::before{opacity:1}
 
 /* ---------- HERO ---------- */
-.hero{padding:16px 16px 0}
-.hero-panel{position:relative;overflow:hidden;border-radius:30px;background:#08322b;min-height:calc(100vh - 16px);min-height:calc(100svh - 16px);display:flex;align-items:flex-end}
+.hero{padding:0}
+.hero-panel{position:relative;overflow:hidden;border-radius:0;background:#08322b;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end}
 .hero-panel::before{content:"";position:absolute;width:640px;height:640px;border:1px solid rgba(255,255,255,.07);border-radius:50%;right:-160px;top:-230px}
 .hero-inner{position:relative;z-index:3;width:100%;max-width:var(--max);margin:0 auto;padding:150px 22px 46px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:end}
 .hero h1{font-size:clamp(34px,4.4vw,55px);line-height:1.08;letter-spacing:-.035em;font-weight:700;color:#fff;max-width:14ch}
@@ -179,7 +179,7 @@ section{scroll-margin-top:100px}
 .chips-band{padding:54px 0;overflow:hidden}
 .chip-viewport{margin-top:24px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .chip-track{display:flex;gap:12px;width:max-content;animation:chip-scroll 32s linear infinite}
-.chip-viewport:hover .chip-track{animation-play-state:paused}
+@media (hover:hover) and (pointer:fine){.chip-viewport:hover .chip-track{animation-play-state:paused}}
 @keyframes chip-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .chip{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 18px 10px 10px;font-size:13px;font-weight:600;white-space:nowrap}
 .chip .logo{width:26px;height:26px;border-radius:50%;background:var(--leaf-soft);display:grid;place-items:center;overflow:hidden;flex-shrink:0}
@@ -315,8 +315,8 @@ footer{border-top:1px solid var(--line);margin-top:40px}
   .edu{grid-template-columns:1fr}
 }
 @media(max-width:640px){
-  .hero{padding:10px 10px 0}
-  .hero-panel{border-radius:22px}
+  .hero{padding:0}
+  .hero-panel{border-radius:0}
   .hero-inner{padding:20px 18px 28px}
   .hero .btn-row{gap:8px}
   .hero .btn{padding:12px 14px 12px 18px;font-size:13px}
@@ -512,7 +512,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
         <span class="chip"><span class="logo"><img src="images/tools/omron.svg" alt="" loading="lazy"></span>PLC Omron</span>
         <span class="chip"><span class="logo"><img src="images/tools/raspberry-pi.svg" alt="" loading="lazy"></span>Raspberry Pi</span>
         <span class="chip"><span class="logo"><img src="images/tools/arduino.svg" alt="" loading="lazy"></span>Arduino</span>
-        <span class="chip"><span class="logo"><img src="images/tools/lora.svg" alt="" loading="lazy"></span>VsCode</span>
+        <span class="chip"><span class="logo"><img src="images/tools/lora.svg" alt="" loading="lazy"></span>LoRa</span>
         <span class="chip"><span class="logo"><img src="images/tools/unity.svg" alt="" loading="lazy"></span>Unity</span>
         <!-- duplicated for seamless marquee loop -->
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/python.svg" alt="" loading="lazy"></span>Python</span>
@@ -524,7 +524,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/omron.svg" alt="" loading="lazy"></span>PLC Omron</span>
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/raspberry-pi.svg" alt="" loading="lazy"></span>Raspberry Pi</span>
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/arduino.svg" alt="" loading="lazy"></span>Arduino</span>
-        <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/lora.svg" alt="" loading="lazy"></span>VsCode</span>
+        <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/lora.svg" alt="" loading="lazy"></span>LoRa</span>
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/unity.svg" alt="" loading="lazy"></span>Unity</span>
       </div>
     </div>
@@ -743,7 +743,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
           <h2 data-i18n="contact.h2">Mari bangun sesuatu yang berguna</h2>
           <p data-i18n="contact.p">Tertarik dengan otomasi, IoT, jaringan, atau pengembangan sistem? Kirim pesan dan saya balas secepatnya.</p>
           <div class="contact-links">
-            <a href="mailto:defvalnahdan@gmail.com"><small data-i18n="contact.email_label">Email</small><span>defvalnahdan@gmail.com</span><em>↗</em></a>
+            <a href="mailto:defvalhandan@gmail.com"><small data-i18n="contact.email_label">Email</small><span>defvalhandan@gmail.com</span><em>↗</em></a>
             <div><small data-i18n="contact.wa_label">WhatsApp</small><span>+62 821 2010 0897</span>
               <span class="row-actions">
                 <button type="button" id="waCopyBtn" aria-label="Salin nomor WhatsApp" data-i18n-aria="contact.wa_copy_aria" title="Salin nomor" data-i18n-title="contact.wa_copy_title">⧉</button>
@@ -774,7 +774,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
       <p style="margin-top:4px;font-size:11px" data-i18n="footer.updated">Diperbarui terakhir: September 2026</p>
     </div>
     <div class="foot-links">
-      <a href="mailto:defvalnahdan@gmail.com">Email</a>
+      <a href="mailto:defvalhandan@gmail.com">Email</a>
       <a href="https://wa.me/6282120100897" target="_blank" rel="noopener">WhatsApp</a>
       <span>© 2026 Muhammad Defval Andika Saripudin</span>
     </div>
@@ -1126,6 +1126,10 @@ function onScroll(){
 }
 window.addEventListener('scroll', onScroll, {passive:true});
 onScroll();
+
+toTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 /* ---------- LIGHTBOX: preview foto penuh saat diklik ---------- */
 const lightbox = document.getElementById('lightbox');
