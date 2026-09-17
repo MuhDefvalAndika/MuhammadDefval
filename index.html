@@ -9,7 +9,9 @@
 <meta property="og:title" content="Muhammad Defval Andika Saripudin | Portfolio">
 <meta property="og:description" content="Industrial Informatics & Automation Enthusiast">
 <meta property="og:type" content="website">
-<meta property="og:image" content="images/og-cover.png">
+<meta property="og:url" content="https://muhammad-defval.vercel.app/">
+<meta property="og:image" content="https://muhammad-defval.vercel.app/images/og-cover.png">
+<link rel="canonical" href="https://muhammad-defval.vercel.app/">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -165,6 +167,16 @@ section{scroll-margin-top:100px}
 .info-card b{display:block;margin-top:14px;font-size:14px}
 .info-card small{display:block;margin-top:3px;color:var(--muted);font-size:12px}
 
+/* ---------- LANGUAGES ---------- */
+.lang-row{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.lang-card{background:var(--mist);border:1px solid var(--line);border-radius:16px;padding:18px}
+.lang-card .lang-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.lang-card b{font-size:14px}
+.lang-card .lang-level{font-size:11px;font-weight:700;color:var(--forest);background:var(--leaf-soft);padding:5px 11px;border-radius:999px;white-space:nowrap}
+.lang-bar{margin-top:12px;height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+.lang-bar span{display:block;height:100%;background:var(--leaf);border-radius:999px}
+.lang-card small{display:block;margin-top:8px;color:var(--muted);font-size:11.5px}
+
 /* ---------- SERVICES ---------- */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .svc{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;min-height:190px;transition:border-color .25s,box-shadow .25s,transform .25s}
@@ -238,6 +250,21 @@ section{scroll-margin-top:100px}
 .edu-list div{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line);font-size:13.5px}
 .edu-list div:last-child{border-bottom:0}
 .edu-list i{font-style:normal;color:var(--leaf);font-weight:700;font-size:12px;padding-top:2px}
+
+/* ---------- PUBLICATIONS ---------- */
+.pub-list{display:flex;flex-direction:column;gap:14px}
+.pub-card{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff;display:flex;flex-direction:column;gap:10px;transition:border-color .25s,box-shadow .25s,transform .25s}
+.pub-card:hover{border-color:#cfe6dc;box-shadow:0 16px 38px rgba(14,61,51,.07);transform:translateY(-2px)}
+.pub-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.pub-badge{display:inline-flex;align-items:center;gap:7px;background:var(--leaf-soft);color:var(--forest);font-size:11.5px;font-weight:700;padding:6px 13px;border-radius:999px}
+.pub-meta{color:var(--muted);font-size:12px}
+.pub-card h3{font-size:16.5px;font-weight:700;letter-spacing:-.01em;line-height:1.4}
+.pub-card p{color:var(--muted);font-size:13px}
+.pub-authors{font-size:12.5px;color:var(--muted)}
+.pub-authors b{color:var(--ink);font-weight:700}
+.pub-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.pub-links a{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:700;color:var(--forest);background:var(--mist);border:1px solid var(--line);padding:9px 15px;border-radius:999px;transition:background .2s,border-color .2s}
+.pub-links a:hover{background:var(--leaf-soft);border-color:#cfe6dc}
 
 /* ---------- CONTACT ---------- */
 .contact-panel{border-radius:26px;overflow:hidden;background:var(--forest);display:grid;grid-template-columns:1.05fr .95fr}
@@ -328,7 +355,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
   .hero-photo{height:320px}
   .hero-badges{flex-direction:column}
   .badge-stat{min-width:0}
-  .info-row,.svc-grid,.proj-grid,.gal-grid{grid-template-columns:1fr}
+  .info-row,.lang-row,.svc-grid,.proj-grid,.gal-grid{grid-template-columns:1fr}
   .proj.feature{grid-column:span 1}
   .proj.feature h3{font-size:20px}
   .pad{padding:64px 0}
@@ -377,6 +404,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
     <a href="#internship" data-i18n="nav.internship">Magang</a>
     <a href="#projects" data-i18n="nav.projects">Proyek</a>
     <a href="#education" data-i18n="nav.education">Pendidikan</a>
+    <a href="#publications" data-i18n="nav.publications">Publikasi</a>
     <a href="#contact" class="nav-cta-mobile" data-i18n="nav.cta">Hubungi saya</a>
     <button type="button" class="lang-toggle lang-toggle-mobile" id="langToggleMobile" aria-label="Ganti bahasa / Switch language"><span data-lang-btn="id">ID</span><span data-lang-btn="en">EN</span></button>
   </nav>
@@ -393,6 +421,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
   <a href="#internship" data-dot="internship" title="Magang" data-i18n-title="nav.internship"><span></span></a>
   <a href="#projects" data-dot="projects" title="Proyek" data-i18n-title="nav.projects"><span></span></a>
   <a href="#education" data-dot="education" title="Pendidikan" data-i18n-title="nav.education"><span></span></a>
+  <a href="#publications" data-dot="publications" title="Publikasi" data-i18n-title="nav.publications"><span></span></a>
   <a href="#contact" data-dot="contact" title="Kontak" data-i18n-title="nav.contact"><span></span></a>
 </nav>
 
@@ -450,6 +479,18 @@ footer{border-top:1px solid var(--line);margin-top:40px}
         <div class="info-row">
           <div class="info-card"><span class="ico">🎓</span><b data-i18n="about.info1_b">D4 Informatika Industri</b><small data-i18n="about.info1_small">Polman Bandung · 2023 — sekarang</small></div>
           <div class="info-card"><span class="ico">📍</span><b data-i18n="about.info2_b">Bandung, Indonesia</b><small data-i18n="about.info2_small">Terbuka untuk kerja lapangan &amp; remote</small></div>
+        </div>
+        <div class="lang-row">
+          <div class="lang-card">
+            <div class="lang-top"><b data-i18n="about.lang1_b">Bahasa Indonesia</b><span class="lang-level" data-i18n="about.lang1_level">Native</span></div>
+            <div class="lang-bar"><span style="width:100%"></span></div>
+            <small data-i18n="about.lang1_small">Bahasa ibu, digunakan setiap hari untuk komunikasi lisan &amp; tulisan.</small>
+          </div>
+          <div class="lang-card">
+            <div class="lang-top"><b data-i18n="about.lang2_b">Bahasa Inggris</b><span class="lang-level" data-i18n="about.lang2_level">Menengah — B1/B2</span></div>
+            <div class="lang-bar"><span style="width:70%"></span></div>
+            <small data-i18n="about.lang2_small">Mampu membaca dokumentasi teknis, menulis laporan, dan berkomunikasi dasar dalam konteks kerja.</small>
+          </div>
         </div>
       </div>
     </div>
@@ -737,6 +778,32 @@ footer{border-top:1px solid var(--line);margin-top:40px}
     </div>
   </section>
 
+  <!-- PUBLICATIONS -->
+  <section class="pad-sm" id="publications">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" data-i18n="publications.eyebrow">Karya ilmiah</span>
+        <h2 data-i18n-html="publications.h2">Publikasi <span>jurnal</span></h2>
+        <p data-i18n="publications.p">Riset kolaboratif yang dipublikasikan pada jurnal ilmiah terindeks nasional.</p>
+      </div>
+      <div class="pub-list">
+        <article class="pub-card">
+          <div class="pub-top">
+            <span class="pub-badge" data-i18n="publications.p1_badge">Jurnal Nasional</span>
+            <span class="pub-meta">Jurnal ISO: Jurnal Ilmu Sosial, Politik dan Humaniora · Vol. 6 No. 1 (2026) · <span data-i18n="publications.p1_date">Terbit 23 Nov 2025</span></span>
+          </div>
+          <h3 data-i18n="publications.p1_h">Pola Perilaku Penggunaan Transportasi Online oleh Masyarakat Bandung</h3>
+          <p data-i18n="publications.p1_p">Studi kuantitatif deskriptif terhadap 100 pengemudi ojek online di Kota Bandung, membahas frekuensi pemesanan, struktur tarif, dan pendapatan harian pengemudi.</p>
+          <p class="pub-authors" data-i18n-html="publications.p1_authors">Erdani, Y., Dzaki, M., Rachmadiyanti, L. N., <b>Andika Saripudin, M. D.</b>, &amp; Nur Fadhilah, M. H.</p>
+          <div class="pub-links">
+            <a href="https://penerbitadm.pubmedia.id/index.php/iso/article/view/3238" target="_blank" rel="noopener"><span data-i18n="publications.p1_link_view">Baca artikel</span> ↗</a>
+            <a href="https://doi.org/10.53697/iso.v6i1.3238" target="_blank" rel="noopener">DOI: 10.53697/iso.v6i1.3238 ↗</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="pad-sm" id="contact">
     <div class="wrap">
@@ -798,6 +865,7 @@ const translations = {
     skip: "Langsung ke konten",
     "nav.home": "Home", "nav.about": "Tentang", "nav.skills": "Keahlian",
     "nav.internship": "Magang", "nav.projects": "Proyek", "nav.education": "Pendidikan",
+    "nav.publications": "Publikasi",
     "nav.contact": "Kontak", "nav.cta": "Hubungi saya",
     "hero.photo_alt": "Foto Muhammad Defval Andika Saripudin",
     "hero.badge": "Siap magang & kolaborasi proyek",
@@ -819,6 +887,12 @@ const translations = {
     "about.info1_small": "Polman Bandung · 2023 — sekarang",
     "about.info2_b": "Bandung, Indonesia",
     "about.info2_small": "Terbuka untuk kerja lapangan & remote",
+    "about.lang1_b": "Bahasa Indonesia",
+    "about.lang1_level": "Native",
+    "about.lang1_small": "Bahasa ibu, digunakan setiap hari untuk komunikasi lisan & tulisan.",
+    "about.lang2_b": "Bahasa Inggris",
+    "about.lang2_level": "Menengah — B1/B2",
+    "about.lang2_small": "Mampu membaca dokumentasi teknis, menulis laporan, dan berkomunikasi dasar dalam konteks kerja.",
     "skills.eyebrow": "Bidang keahlian",
     "skills.h2": "Yang bisa saya <span>kerjakan</span>",
     "skills.p": "Enam bidang yang saya pelajari dan praktikkan langsung lewat proyek kampus, magang industri, dan eksperimen pribadi.",
@@ -900,6 +974,15 @@ const translations = {
     "education.ach2": "Majelis Tinggi Himpunan Mahasiswa HIMAMO",
     "education.ach3": "Juara 1 Kejuaraan Voli tingkat Kota Cimahi",
     "education.ach4": "Peserta PORSEMNI tingkat nasional di Malang — bola voli pasir 2024",
+    "publications.eyebrow": "Karya ilmiah",
+    "publications.h2": "Publikasi <span>jurnal</span>",
+    "publications.p": "Riset kolaboratif yang dipublikasikan pada jurnal ilmiah terindeks nasional.",
+    "publications.p1_badge": "Jurnal Nasional",
+    "publications.p1_date": "Terbit 23 Nov 2025",
+    "publications.p1_h": "Pola Perilaku Penggunaan Transportasi Online oleh Masyarakat Bandung",
+    "publications.p1_p": "Studi kuantitatif deskriptif terhadap 100 pengemudi ojek online di Kota Bandung, membahas frekuensi pemesanan, struktur tarif, dan pendapatan harian pengemudi.",
+    "publications.p1_authors": "Erdani, Y., Dzaki, M., Rachmadiyanti, L. N., <b>Andika Saripudin, M. D.</b>, & Nur Fadhilah, M. H.",
+    "publications.p1_link_view": "Baca artikel",
     "contact.eyebrow": "Hubungi saya",
     "contact.h2": "Mari bangun sesuatu yang berguna",
     "contact.p": "Tertarik dengan otomasi, IoT, jaringan, atau pengembangan sistem? Kirim pesan dan saya balas secepatnya.",
@@ -924,6 +1007,7 @@ const translations = {
     skip: "Skip to content",
     "nav.home": "Home", "nav.about": "About", "nav.skills": "Skills",
     "nav.internship": "Internship", "nav.projects": "Projects", "nav.education": "Education",
+    "nav.publications": "Publications",
     "nav.contact": "Contact", "nav.cta": "Contact me",
     "hero.photo_alt": "Photo of Muhammad Defval Andika Saripudin",
     "hero.badge": "Open to internships & project collaboration",
@@ -945,6 +1029,12 @@ const translations = {
     "about.info1_small": "Polman Bandung · 2023 — present",
     "about.info2_b": "Bandung, Indonesia",
     "about.info2_small": "Open to on-site & remote work",
+    "about.lang1_b": "Indonesian",
+    "about.lang1_level": "Native",
+    "about.lang1_small": "Mother tongue, used daily for spoken & written communication.",
+    "about.lang2_b": "English",
+    "about.lang2_level": "Intermediate — B1/B2",
+    "about.lang2_small": "Able to read technical documentation, write reports, and communicate in basic work contexts.",
     "skills.eyebrow": "Areas of expertise",
     "skills.h2": "What I can <span>do</span>",
     "skills.p": "Six areas I've learned and practiced through campus projects, industry internships, and personal experiments.",
@@ -1026,6 +1116,15 @@ const translations = {
     "education.ach2": "Senior Council member of HIMAMO student association",
     "education.ach3": "1st place, Cimahi City Volleyball Championship",
     "education.ach4": "National PORSEMNI participant in Malang — beach volleyball 2024",
+    "publications.eyebrow": "Scholarly work",
+    "publications.h2": "Journal <span>publication</span>",
+    "publications.p": "Collaborative research published in a nationally indexed academic journal.",
+    "publications.p1_badge": "National Journal",
+    "publications.p1_date": "Published Nov 23, 2025",
+    "publications.p1_h": "Usage Patterns of Online Transportation Among the Bandung Community",
+    "publications.p1_p": "A quantitative descriptive study of 100 online motorcycle-taxi drivers in Bandung, covering order frequency, fare structure, and drivers' daily income.",
+    "publications.p1_authors": "Erdani, Y., Dzaki, M., Rachmadiyanti, L. N., <b>Andika Saripudin, M. D.</b>, & Nur Fadhilah, M. H.",
+    "publications.p1_link_view": "Read article",
     "contact.eyebrow": "Contact me",
     "contact.h2": "Let's build something useful",
     "contact.p": "Interested in automation, IoT, networking, or system development? Send a message and I'll reply as soon as possible.",
