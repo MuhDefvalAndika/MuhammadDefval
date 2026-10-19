@@ -17,7 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Muhammad Defval Andika Saripudin | Portfolio">
 <meta name="twitter:description" content="Industrial Informatics & Automation Enthusiast">
-<meta name="twitter:image" content="images/og-cover.png">
+<meta name="twitter:image" content="https://muhammad-defval.vercel.app/images/og-cover.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -33,7 +33,7 @@
     "addressLocality": "Bandung",
     "addressCountry": "ID"
   },
-  "email": "mailto:defvalnahdan@gmail.com",
+  "email": "defvalnahdan@gmail.com",
   "knowsAbout": ["Internet of Things", "Industrial Automation", "Computer Vision", "Machine Learning", "Computer Networking", "Web Development"]
 }
 </script>
@@ -77,10 +77,11 @@ section{scroll-margin-top:100px}
 .brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.02em;font-size:15px;color:#fff}
 .brand .mark{width:30px;height:30px;border-radius:9px;background:var(--leaf);color:#06281f;display:grid;place-items:center;font-size:11px;font-weight:800;flex-shrink:0}
 .nav.solid .brand{color:var(--ink)}
-.nav-links{display:flex;align-items:center;gap:6px}
-.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.78);padding:8px 13px;border-radius:999px;transition:color .2s,background .2s}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{font-size:13px;font-weight:500;color:rgba(255,255,255,.78);padding:8px 11px;border-radius:999px;transition:color .2s,background .2s;white-space:nowrap}
 .nav-links a:hover{color:#fff}
 .nav-links a.active{color:#fff;background:rgba(255,255,255,.12)}
+.nav-links .nav-cta-mobile{display:none}
 .nav.solid .nav-links a{color:var(--muted)}
 .nav.solid .nav-links a:hover{color:var(--ink)}
 .nav.solid .nav-links a.active{color:var(--forest);background:var(--leaf-soft)}
@@ -99,7 +100,7 @@ section{scroll-margin-top:100px}
 
 /* ---------- SECTION DOTS ---------- */
 .section-dots{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:45;display:flex;flex-direction:column;gap:16px}
-.section-dots a{display:block;width:22px;height:22px;display:grid;place-items:center;position:relative}
+.section-dots a{width:22px;height:22px;display:grid;place-items:center;position:relative}
 .section-dots a span{width:8px;height:8px;border-radius:50%;background:rgba(16,34,28,.22);transition:background .25s,transform .25s}
 .section-dots a:hover span{background:rgba(16,34,28,.5)}
 .section-dots a.active span{background:var(--leaf);transform:scale(1.35)}
@@ -110,7 +111,7 @@ section{scroll-margin-top:100px}
 .hero{padding:0}
 .hero-panel{position:relative;overflow:hidden;border-radius:0;background:#08322b;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end}
 .hero-panel::before{content:"";position:absolute;width:640px;height:640px;border:1px solid rgba(255,255,255,.07);border-radius:50%;right:-160px;top:-230px}
-.hero-inner{position:relative;z-index:3;width:100%;max-width:var(--max);margin:0 auto;padding:150px 22px 46px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:end}
+.hero-inner{position:relative;z-index:3;width:100%;max-width:var(--max);margin:0 auto;padding:150px 22px 46px;display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:end}
 .hero h1{font-size:clamp(34px,4.4vw,55px);line-height:1.08;letter-spacing:-.035em;font-weight:700;color:#fff;max-width:14ch}
 .hero .lede{margin-top:18px;color:#a9c3ba;font-size:14px;max-width:46ch}
 .hero .btn-row{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
@@ -193,10 +194,10 @@ section{scroll-margin-top:100px}
 .chip-viewport::before,.chip-viewport::after{content:"";position:absolute;top:0;bottom:0;width:60px;z-index:2;pointer-events:none}
 .chip-viewport::before{left:0;background:linear-gradient(90deg,#fff,rgba(255,255,255,0))}
 .chip-viewport::after{right:0;background:linear-gradient(270deg,#fff,rgba(255,255,255,0))}
-.chip-track{display:flex;gap:12px;width:max-content;animation:chip-scroll 32s linear infinite;will-change:transform;transform:translateZ(0);backface-visibility:hidden}
+.chip-track{display:flex;gap:0;width:max-content;animation:chip-scroll 32s linear infinite;will-change:transform;transform:translateZ(0);backface-visibility:hidden}
 @media (hover:hover) and (pointer:fine){.chip-viewport:hover .chip-track{animation-play-state:paused}}
 @keyframes chip-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.chip{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 18px 10px 10px;font-size:13px;font-weight:600;white-space:nowrap}
+.chip{display:inline-flex;align-items:center;gap:10px;margin-right:12px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 18px 10px 10px;font-size:13px;font-weight:600;white-space:nowrap}
 .chip .logo{width:26px;height:26px;border-radius:50%;background:var(--leaf-soft);display:grid;place-items:center;overflow:hidden;flex-shrink:0}
 .chip .logo img{width:100%;height:100%;object-fit:contain;padding:3px}
 
@@ -212,6 +213,7 @@ section{scroll-margin-top:100px}
 .proj:hover{border-color:#cfe6dc;box-shadow:0 16px 38px rgba(14,61,51,.07);transform:translateY(-2px)}
 .proj-photo{aspect-ratio:16/10;background:var(--mist);overflow:hidden;position:relative;cursor:zoom-in}
 .proj-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;background:var(--mist)}
+.proj-photo.top img{object-position:center top}
 .proj-photo::after{content:"⤢";position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:9px;background:rgba(16,34,28,.55);color:#fff;display:grid;place-items:center;font-size:13px;opacity:0;transition:opacity .2s}
 .proj:hover .proj-photo::after,.proj-photo:focus-visible::after{opacity:1}
 .proj-body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
@@ -251,10 +253,11 @@ section{scroll-margin-top:100px}
 .edu-list div:last-child{border-bottom:0}
 .edu-list i{font-style:normal;color:var(--leaf);font-weight:700;font-size:12px;padding-top:2px}
 
-/* ---------- PUBLICATIONS ---------- */
+/* ---------- PUBLICATIONS / ACTIVITIES CARD ---------- */
 .pub-list{display:flex;flex-direction:column;gap:14px}
 .pub-card{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff;display:flex;flex-direction:column;gap:10px;transition:border-color .25s,box-shadow .25s,transform .25s}
 .pub-card:hover{border-color:#cfe6dc;box-shadow:0 16px 38px rgba(14,61,51,.07);transform:translateY(-2px)}
+.pub-card.mb{margin-bottom:16px}
 .pub-top{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .pub-badge{display:inline-flex;align-items:center;gap:7px;background:var(--leaf-soft);color:var(--forest);font-size:11.5px;font-weight:700;padding:6px 13px;border-radius:999px}
 .pub-meta{color:var(--muted);font-size:12px}
@@ -320,7 +323,10 @@ footer{border-top:1px solid var(--line);margin-top:40px}
 .nav-links .lang-toggle-mobile span{padding:8px 20px}
 
 /* ---------- RESPONSIVE ---------- */
-@media(max-width:1000px){
+@media(max-width:1200px){
+  .section-dots{display:none}
+}
+@media(max-width:1100px){
   .nav-links{display:none;position:absolute;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:4px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 18px 40px rgba(14,61,51,.12);max-height:calc(100svh - 110px - var(--safe-t));overflow-y:auto}
   .nav-links.open{display:flex}
   .nav-links a{color:var(--muted);padding:13px 15px;font-size:14px}
@@ -331,7 +337,8 @@ footer{border-top:1px solid var(--line);margin-top:40px}
   .nav-links .lang-toggle-mobile span.active{background:var(--forest);color:#fff}
   .burger{display:block}
   .nav-cta{display:none}
-  .section-dots{display:none}
+}
+@media(max-width:1000px){
   .hero-panel{min-height:0;flex-direction:column;align-items:stretch}
   .hero-inner{grid-template-columns:1fr;padding:26px 22px 40px;gap:0}
   .hero-photo{position:relative;inset:auto;width:100%;min-width:0;height:380px;border-radius:18px;order:-1;margin:0}
@@ -373,7 +380,14 @@ footer{border-top:1px solid var(--line);margin-top:40px}
   .hero h1{font-size:30px}
   .hero .lede{font-size:13px}
 }
-@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important} .chip-track{animation:chip-scroll 32s linear infinite!important}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+  .chip-track{animation:none!important;transform:none}
+  .chip[aria-hidden="true"]{display:none}
+  .chip-viewport{overflow-x:auto}
+  .chip-viewport::before,.chip-viewport::after{display:none}
+}
 
 @media print{
   .nav,.nav-scrim,.burger,.section-dots,.to-top,.lightbox,.filter-row,.chip-track{display:none!important}
@@ -403,12 +417,13 @@ footer{border-top:1px solid var(--line);margin-top:40px}
     <a href="#skills" data-i18n="nav.skills">Keahlian</a>
     <a href="#internship" data-i18n="nav.internship">Magang</a>
     <a href="#projects" data-i18n="nav.projects">Proyek</a>
+    <a href="#activities" data-i18n="nav.activities">Kegiatan</a>
     <a href="#education" data-i18n="nav.education">Pendidikan</a>
     <a href="#publications" data-i18n="nav.publications">Publikasi</a>
     <a href="#contact" class="nav-cta-mobile" data-i18n="nav.cta">Hubungi saya</a>
-    <button type="button" class="lang-toggle lang-toggle-mobile" id="langToggleMobile" aria-label="Ganti bahasa / Switch language"><span data-lang-btn="id">ID</span><span data-lang-btn="en">EN</span></button>
+    <button type="button" class="lang-toggle lang-toggle-mobile" id="langToggleMobile" aria-label="Ganti bahasa / Switch language" aria-pressed="false"><span data-lang-btn="id">ID</span><span data-lang-btn="en">EN</span></button>
   </nav>
-  <button type="button" class="lang-toggle" id="langToggle" aria-label="Ganti bahasa / Switch language"><span data-lang-btn="id">ID</span><span data-lang-btn="en">EN</span></button>
+  <button type="button" class="lang-toggle" id="langToggle" aria-label="Ganti bahasa / Switch language" aria-pressed="false"><span data-lang-btn="id">ID</span><span data-lang-btn="en">EN</span></button>
   <a href="#contact" class="nav-cta" data-i18n="nav.cta">Hubungi saya</a>
   <button class="burger" id="burger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks"><i></i><i></i><i></i></button>
 </header>
@@ -420,6 +435,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
   <a href="#skills" data-dot="skills" title="Keahlian" data-i18n-title="nav.skills"><span></span></a>
   <a href="#internship" data-dot="internship" title="Magang" data-i18n-title="nav.internship"><span></span></a>
   <a href="#projects" data-dot="projects" title="Proyek" data-i18n-title="nav.projects"><span></span></a>
+  <a href="#activities" data-dot="activities" title="Kegiatan" data-i18n-title="nav.activities"><span></span></a>
   <a href="#education" data-dot="education" title="Pendidikan" data-i18n-title="nav.education"><span></span></a>
   <a href="#publications" data-dot="publications" title="Publikasi" data-i18n-title="nav.publications"><span></span></a>
   <a href="#contact" data-dot="contact" title="Kontak" data-i18n-title="nav.contact"><span></span></a>
@@ -438,7 +454,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
       <div class="hero-badges">
         <span class="badge-pill"><span class="ping"></span><span data-i18n="hero.badge">Siap magang &amp; kolaborasi proyek</span></span>
         <div class="badge-stat">
-          <div class="stat-num">12+ <span data-i18n="hero.stat_label">proyek dikerjakan</span></div>
+          <div class="stat-num">15+ <span data-i18n="hero.stat_label">proyek dikerjakan</span></div>
           <p data-i18n="hero.stat_desc">Mulai dari IoT, otomasi PLC, computer vision, sampai jaringan.</p>
         </div>
       </div>
@@ -473,7 +489,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
         <span class="eyebrow" data-i18n="about.eyebrow">Tentang saya</span>
         <h2>Muhammad Defval Andika Saripudin</h2>
         <p class="body" data-i18n="about.body1">Mahasiswa Politeknik Manufaktur Negeri Bandung, Jurusan Teknik Otomasi Manufaktur dan Mekatronika, Program Studi D4 Teknologi Rekayasa Informatika Industri.</p>
-        <p class="body" data-i18n="about.body2">Fokus saya ada di titik temu antara perangkat keras dan perangkat lunak: sensor dan PLC di lapangan, lalu datanya diolah dan ditampilkan lewat dashboard yang mudah dibaca operator. Terbiasa menangani konfigurasi Mikrotik, pengkabelan LAN, pengelolaan server, dan network monitoring.</p>
+        <p class="body" data-i18n="about.body2">Fokus saya ada di titik temu antara perangkat keras dan perangkat lunak: sensor dan PLC di lapangan, lalu datanya diolah dan ditampilkan lewat dashboard yang mudah dibaca operator. Terbiasa menangani konfigurasi MikroTik, pengkabelan LAN, pengelolaan server, dan network monitoring.</p>
         <p class="body" data-i18n="about.body3">Untuk sisi data, saya memakai Python dan SQL, termasuk penerapan machine learning dan computer vision untuk inspeksi kualitas dan sistem cerdas lainnya.</p>
         <div style="margin-top:24px"><a class="btn btn-leaf" href="#projects"><span data-i18n="about.btn">Lihat rekam jejak</span> <span class="dot">↗</span></a></div>
         <div class="info-row">
@@ -524,7 +540,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
         <article class="svc">
           <span class="ico">🌐</span>
           <h3 data-i18n="skills.svc4_h">Jaringan Komputer</h3>
-          <p data-i18n="skills.svc4_p">Konfigurasi Mikrotik, pengkabelan LAN, pengelolaan server, dan monitoring.</p>
+          <p data-i18n="skills.svc4_p">Konfigurasi MikroTik, pengkabelan LAN, pengelolaan server, dan monitoring.</p>
         </article>
         <article class="svc">
           <span class="ico">🧠</span>
@@ -552,11 +568,11 @@ footer{border-top:1px solid var(--line);margin-top:40px}
         <span class="chip"><span class="logo"><img src="images/tools/opencv.svg" alt="" loading="lazy"></span>OpenCV</span>
         <span class="chip"><span class="logo"><img src="images/tools/node-red.svg" alt="" loading="lazy"></span>Node-RED</span>
         <span class="chip"><span class="logo"><img src="images/tools/sql-server.svg" alt="" loading="lazy"></span>SQL Server</span>
-        <span class="chip"><span class="logo"><img src="images/tools/mikrotik.svg" alt="" loading="lazy"></span>Mikrotik</span>
+        <span class="chip"><span class="logo"><img src="images/tools/mikrotik.svg" alt="" loading="lazy"></span>MikroTik</span>
         <span class="chip"><span class="logo"><img src="images/tools/omron.svg" alt="" loading="lazy"></span>PLC Omron</span>
         <span class="chip"><span class="logo"><img src="images/tools/raspberry-pi.svg" alt="" loading="lazy"></span>Raspberry Pi</span>
         <span class="chip"><span class="logo"><img src="images/tools/arduino.svg" alt="" loading="lazy"></span>Arduino</span>
-        <span class="chip"><span class="logo"><img src="images/tools/lora.svg" alt="" loading="lazy"></span>VsCode</span>
+        <span class="chip"><span class="logo"><img src="images/tools/vscode.svg" alt="" loading="lazy"></span>VsCode</span>
         <span class="chip"><span class="logo"><img src="images/tools/unity.svg" alt="" loading="lazy"></span>Unity</span>
         <!-- duplicated for seamless marquee loop -->
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/python.svg" alt="" loading="lazy"></span>Python</span>
@@ -564,11 +580,11 @@ footer{border-top:1px solid var(--line);margin-top:40px}
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/opencv.svg" alt="" loading="lazy"></span>OpenCV</span>
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/node-red.svg" alt="" loading="lazy"></span>Node-RED</span>
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/sql-server.svg" alt="" loading="lazy"></span>SQL Server</span>
-        <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/mikrotik.svg" alt="" loading="lazy"></span>Mikrotik</span>
+        <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/mikrotik.svg" alt="" loading="lazy"></span>MikroTik</span>
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/omron.svg" alt="" loading="lazy"></span>PLC Omron</span>
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/raspberry-pi.svg" alt="" loading="lazy"></span>Raspberry Pi</span>
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/arduino.svg" alt="" loading="lazy"></span>Arduino</span>
-        <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/lora.svg" alt="" loading="lazy"></span>VsCode</span>
+        <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/vscode.svg" alt="" loading="lazy"></span>VsCode</span>
         <span class="chip" aria-hidden="true"><span class="logo"><img src="images/tools/unity.svg" alt="" loading="lazy"></span>Unity</span>
       </div>
     </div>
@@ -626,7 +642,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
       <div class="head">
         <span class="eyebrow" data-i18n="projects.eyebrow">Proyek terpilih</span>
         <h2 data-i18n-html="projects.h2">Belajar yang berujung <span>jadi sistem</span></h2>
-        <p data-i18n="projects.p">Dua belas proyek dari perkuliahan dan eksplorasi pribadi, mencakup IoT, otomasi, machine learning, sampai jaringan.</p>
+        <p data-i18n="projects.p">Enam belas proyek dari perkuliahan dan eksplorasi pribadi, mencakup IoT, otomasi, machine learning, sampai jaringan.</p>
       </div>
       <div class="filter-row" id="filterRow" role="group" aria-label="Filter proyek berdasarkan kategori">
         <button type="button" class="filter-chip active" data-filter="all" data-i18n="projects.filter_all">Semua</button>
@@ -639,8 +655,8 @@ footer{border-top:1px solid var(--line);margin-top:40px}
       </div>
       <p class="filter-empty" id="filterEmpty" hidden data-i18n="projects.filter_empty">Belum ada proyek pada kategori ini.</p>
       <div class="proj-grid" id="projGrid">
-        <article class="proj" data-cat="iot">
-          <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto proyek monitoring suhu IoT" data-i18n-aria="projects.p01_zoom_aria"><!-- GANTI FOTO: proyek 01 --><img src="images/projects/01-monitoring-suhu.jpg" alt="Implementasi Sistem Monitoring Suhu Berbasis IoT" loading="lazy" data-i18n-alt="projects.p01_h"></div>
+        <article class="proj" data-cat="iot web">
+          <div class="proj-photo top" tabindex="0" role="button" aria-label="Perbesar foto proyek monitoring suhu IoT" data-i18n-aria="projects.p01_zoom_aria"><!-- GANTI FOTO: proyek 01 --><img src="images/projects/01-monitoring-suhu.jpg" alt="Implementasi Sistem Monitoring Suhu Berbasis IoT" loading="lazy" data-i18n-alt="projects.p01_h"></div>
           <div class="proj-body">
             <span class="no">01</span>
             <h3 data-i18n="projects.p01_h">Implementasi Sistem Monitoring Suhu Berbasis IoT</h3>
@@ -657,7 +673,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
             <div class="tags"><span>PLC Trainer</span><span>Omron</span><span>Motor DC</span></div>
           </div>
         </article>
-        <article class="proj" data-cat="iot">
+        <article class="proj" data-cat="iot otomasi">
           <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto robot line follower" data-i18n-aria="projects.p03_zoom_aria"><!-- GANTI FOTO: proyek 03 --><img src="images/projects/03-line-follower.jpg" alt="Pembuatan Robot Line Follower Berbasis Arduino" loading="lazy" data-i18n-alt="projects.p03_h"></div>
           <div class="proj-body">
             <span class="no">03</span>
@@ -667,7 +683,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
           </div>
         </article>
         <article class="proj" data-cat="ml">
-          <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto sistem klasifikasi buku" data-i18n-aria="projects.p04_zoom_aria"><!-- GANTI FOTO: proyek 04 --><img src="images/projects/04-klasifikasi-buku.jpg" alt="Pembuatan Sistem Klasifikasi Buku di Perpustakaan Menggunakan Machine Learning" loading="lazy" data-i18n-alt="projects.p04_h"></div>
+          <div class="proj-photo top" tabindex="0" role="button" aria-label="Perbesar foto sistem klasifikasi buku" data-i18n-aria="projects.p04_zoom_aria"><!-- GANTI FOTO: proyek 04 --><img src="images/projects/04-klasifikasi-buku.jpg" alt="Pembuatan Sistem Klasifikasi Buku di Perpustakaan Menggunakan Machine Learning" loading="lazy" data-i18n-alt="projects.p04_h"></div>
           <div class="proj-body">
             <span class="no">04</span>
             <h3 data-i18n="projects.p04_h">Pembuatan Sistem Klasifikasi Buku di Perpustakaan Menggunakan Machine Learning</h3>
@@ -685,16 +701,16 @@ footer{border-top:1px solid var(--line);margin-top:40px}
           </div>
         </article>
         <article class="proj" data-cat="jaringan">
-          <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto konfigurasi Mikrotik hotspot" data-i18n-aria="projects.p06_zoom_aria"><!-- GANTI FOTO: proyek 06 --><img src="images/projects/06-mikrotik-hotspot.jpg" alt="Pengkonfigurasian Mikrotik Menggunakan Winbox sebagai Hotspot Center Berbayar" loading="lazy" data-i18n-alt="projects.p06_h"></div>
+          <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto konfigurasi MikroTik hotspot" data-i18n-aria="projects.p06_zoom_aria"><!-- GANTI FOTO: proyek 06 --><img src="images/projects/06-mikrotik-hotspot.jpg" alt="Pengkonfigurasian MikroTik Menggunakan WinBox sebagai Hotspot Center Berbayar" loading="lazy" data-i18n-alt="projects.p06_h"></div>
           <div class="proj-body">
             <span class="no">06</span>
-            <h3 data-i18n="projects.p06_h">Pengkonfigurasian Mikrotik Menggunakan Winbox sebagai Hotspot Center Berbayar</h3>
-            <p data-i18n="projects.p06_p">Melakukan konfigurasi Mikrotik Router menggunakan Winbox untuk menyediakan layanan hotspot berbayar di wilayah Antapani, Bandung.</p>
-            <div class="tags"><span>Mikrotik</span><span>Winbox</span><span>Networking</span></div>
+            <h3 data-i18n="projects.p06_h">Pengkonfigurasian MikroTik Menggunakan WinBox sebagai Hotspot Center Berbayar</h3>
+            <p data-i18n="projects.p06_p">Melakukan konfigurasi MikroTik Router menggunakan WinBox untuk menyediakan layanan hotspot berbayar di wilayah Antapani, Bandung.</p>
+            <div class="tags"><span>MikroTik</span><span>WinBox</span><span>Networking</span></div>
           </div>
         </article>
-        <article class="proj" data-cat="otomasi">
-          <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto aplikasi tebak huruf hijaiyah dan smart factory" data-i18n-aria="projects.p07_zoom_aria"><!-- GANTI FOTO: proyek 07 --><img src="images/projects/07-tebak-huruf-hijaiyah-smart-factory.jpg" alt="Aplikasi 3D Tebak Huruf Hijaiyah dan Smart Factory Berbasis Arduino dan Unity" loading="lazy" data-i18n-alt="projects.p07_h"></div>
+        <article class="proj" data-cat="otomasi iot">
+          <div class="proj-photo top" tabindex="0" role="button" aria-label="Perbesar foto aplikasi tebak huruf hijaiyah dan smart factory" data-i18n-aria="projects.p07_zoom_aria"><!-- GANTI FOTO: proyek 07 --><img src="images/projects/07-tebak-huruf-hijaiyah-smart-factory.jpg" alt="Aplikasi 3D Tebak Huruf Hijaiyah dan Smart Factory Berbasis Arduino dan Unity" loading="lazy" data-i18n-alt="projects.p07_h"></div>
           <div class="proj-body">
             <span class="no">07</span>
             <h3 data-i18n-html="projects.p07_h">Aplikasi 3D Tebak Huruf Hijaiyah dan Smart Factory Berbasis Arduino &amp; Unity</h3>
@@ -702,7 +718,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
             <div class="tags"><span>Arduino</span><span>Unity</span><span>3D</span><span>Smart Factory</span></div>
           </div>
         </article>
-        <article class="proj" data-cat="cv">
+        <article class="proj" data-cat="cv ml">
           <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto computer vision plat positif dan negatif" data-i18n-aria="projects.p08_zoom_aria"><!-- GANTI FOTO: proyek 08 --><img src="images/projects/08-cv-plat-positif-negatif.jpg" alt="Computer vision deteksi plat positif dan negatif" loading="lazy" data-i18n-alt="projects.p08_h"></div>
           <div class="proj-body">
             <span class="no">08</span>
@@ -711,7 +727,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
             <div class="tags"><span>Python</span><span>YOLO</span><span>OpenCV</span><span>Computer Vision</span></div>
           </div>
         </article>
-        <article class="proj" data-cat="web">
+        <article class="proj" data-cat="otomasi">
           <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto scanner barcode" data-i18n-aria="projects.p09_zoom_aria"><!-- GANTI FOTO: proyek 09 --><img src="images/projects/09-scanner-barcode.jpg" alt="Sistem scanner pencarian plat berbasis barcode" loading="lazy" data-i18n-alt="projects.p09_h"></div>
           <div class="proj-body">
             <span class="no">09</span>
@@ -738,7 +754,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
             <div class="tags"><span>Point of Sale</span><span>Manajemen Stok</span><span>Database</span></div>
           </div>
         </article>
-        <article class="proj" data-cat="iot">
+        <article class="proj" data-cat="iot cv ml web">
           <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto web smart farm peternakan" data-i18n-aria="projects.p12_zoom_aria"><!-- GANTI FOTO: proyek 12 --><img src="images/projects/12-smart-farm.jpg" alt="Web Smart Farm Peternakan" loading="lazy" data-i18n-alt="projects.p12_h"></div>
           <div class="proj-body">
             <span class="no">12</span>
@@ -746,6 +762,81 @@ footer{border-top:1px solid var(--line);margin-top:40px}
             <p data-i18n="projects.p12_p">Dashboard peternakan berbasis IoT yang memantau kondisi kandang secara real-time dan memakai computer vision serta machine learning untuk deteksi dini kondisi ternak.</p>
             <div class="tags"><span>IoT</span><span>Machine Learning</span><span>Computer Vision</span><span>Dashboard</span></div>
           </div>
+        </article>
+        <article class="proj" data-cat="otomasi">
+          <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto teaching robot arm virtual reality" data-i18n-aria="projects.p13_zoom_aria"><!-- GANTI FOTO: proyek 13 --><img src="images/projects/13-teaching-robot-arm-vr.jpg" alt="Teaching Robot Arm by Virtual Reality" loading="lazy" data-i18n-alt="projects.p13_h"></div>
+          <div class="proj-body">
+            <span class="no">13</span>
+            <h3 data-i18n="projects.p13_h">Teaching Robot Arm by Virtual Reality</h3>
+            <p data-i18n="projects.p13_p">Sistem pengajaran lengan robot (robot arm) melalui virtual reality, sehingga gerakan robot dapat dipelajari dan dikendalikan secara interaktif dalam lingkungan virtual.</p>
+            <div class="tags"><span>Virtual Reality</span><span>Robot Arm</span><span>Otomasi</span></div>
+          </div>
+        </article>
+        <article class="proj" data-cat="web">
+          <div class="proj-photo top" tabindex="0" role="button" aria-label="Perbesar foto sistem CMMS" data-i18n-aria="projects.p14_zoom_aria"><!-- GANTI FOTO: proyek 14 --><img src="images/projects/14-cmms.jpg" alt="Sistem CMMS (Computerized Maintenance Management System)" loading="lazy" data-i18n-alt="projects.p14_h"></div>
+          <div class="proj-body">
+            <span class="no">14</span>
+            <h3 data-i18n="projects.p14_h">Sistem CMMS (Computerized Maintenance Management System)</h3>
+            <p data-i18n="projects.p14_p">Sistem manajemen perawatan mesin berbasis komputer untuk mencatat jadwal maintenance, riwayat perbaikan, dan kondisi aset secara terpusat.</p>
+            <div class="tags"><span>CMMS</span><span>Maintenance</span><span>Database</span></div>
+          </div>
+        </article>
+        <article class="proj" data-cat="otomasi">
+          <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto sistem lampu taman otomatis LabVIEW" data-i18n-aria="projects.p15_zoom_aria"><!-- GANTI FOTO: proyek 15 --><img src="images/projects/15-labview-lampu-taman.jpg" alt="Sistem Lampu Taman Otomatis Menggunakan LabVIEW" loading="lazy" data-i18n-alt="projects.p15_h"></div>
+          <div class="proj-body">
+            <span class="no">15</span>
+            <h3 data-i18n="projects.p15_h">Sistem Lampu Taman Otomatis Menggunakan LabVIEW</h3>
+            <p data-i18n="projects.p15_p">Merancang sistem lampu taman otomatis dengan LabVIEW yang menyalakan dan mematikan lampu secara otomatis serta menampilkan statusnya pada antarmuka.</p>
+            <div class="tags"><span>LabVIEW</span><span>Otomasi</span><span>Lampu Taman</span></div>
+          </div>
+        </article>
+        <article class="proj" data-cat="web">
+          <div class="proj-photo" tabindex="0" role="button" aria-label="Perbesar foto sistem ERP Odoo" data-i18n-aria="projects.p16_zoom_aria"><!-- GANTI FOTO: proyek 16 --><img src="images/projects/16-erp-odoo.jpg" alt="Sistem ERP Berbasis Odoo" loading="lazy" data-i18n-alt="projects.p16_h"></div>
+          <div class="proj-body">
+            <span class="no">16</span>
+            <h3 data-i18n="projects.p16_h">Sistem ERP Berbasis Odoo</h3>
+            <p data-i18n="projects.p16_p">Implementasi sistem Enterprise Resource Planning berbasis Odoo untuk mengintegrasikan proses bisnis dalam satu platform terpadu.</p>
+            <div class="tags"><span>Odoo</span><span>ERP</span><span>Business Process</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES / SEMINAR -->
+  <section class="pad-sm" id="activities">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow" data-i18n="activities.eyebrow">Kegiatan &amp; seminar</span>
+        <h2 data-i18n-html="activities.h2">Keikutsertaan dalam <span>kegiatan</span></h2>
+        <p data-i18n="activities.p">Seminar, workshop, dan kegiatan pengembangan diri di luar perkuliahan.</p>
+      </div>
+
+      <article class="pub-card mb">
+        <div class="pub-top">
+          <span class="pub-badge" data-i18n="activities.a1_badge">Kegiatan</span>
+          <!-- ISI: tanggal & lokasi kegiatan -->
+          <span class="pub-meta" data-i18n="activities.a1_meta">Tanggal &amp; lokasi kegiatan</span>
+        </div>
+        <h3 data-i18n="activities.a1_h">Hilirisasi Produk Teaching Aid Otomasi Dengan Machine Vision Dan Virtual Reality</h3>
+        <p data-i18n="activities.a1_p">Dokumentasi keikutsertaan dalam kegiatan hilirisasi produk teaching aid otomasi yang memadukan machine vision dan virtual reality.</p>
+      </article>
+
+      <div class="gal-grid">
+        <article class="gal">
+          <!-- ISI FOTO: ganti src dengan foto kegiatan 1 -->
+          <div class="ph" tabindex="0" role="button" aria-label="Perbesar foto kegiatan 1" data-i18n-aria="activities.g1_zoom_aria"><img src="images/activities/hilirisasi-1.jpg" alt="Dokumentasi kegiatan hilirisasi teaching aid 1" loading="lazy" data-i18n-alt="activities.g1_alt"></div>
+          <div class="cap"><b data-i18n="activities.g1_b">Dokumentasi 1</b><small data-i18n="activities.g1_small">Keterangan foto pertama.</small></div>
+        </article>
+        <article class="gal">
+          <!-- ISI FOTO: ganti src dengan foto kegiatan 2 -->
+          <div class="ph" tabindex="0" role="button" aria-label="Perbesar foto kegiatan 2" data-i18n-aria="activities.g2_zoom_aria"><img src="images/activities/hilirisasi-2.jpg" alt="Dokumentasi kegiatan hilirisasi teaching aid 2" loading="lazy" data-i18n-alt="activities.g2_alt"></div>
+          <div class="cap"><b data-i18n="activities.g2_b">Dokumentasi 2</b><small data-i18n="activities.g2_small">Keterangan foto kedua.</small></div>
+        </article>
+        <article class="gal">
+          <!-- ISI FOTO: ganti src dengan foto kegiatan 3 -->
+          <div class="ph" tabindex="0" role="button" aria-label="Perbesar foto kegiatan 3" data-i18n-aria="activities.g3_zoom_aria"><img src="images/activities/hilirisasi-3.jpg" alt="Dokumentasi kegiatan hilirisasi teaching aid 3" loading="lazy" data-i18n-alt="activities.g3_alt"></div>
+          <div class="cap"><b data-i18n="activities.g3_b">Dokumentasi 3</b><small data-i18n="activities.g3_small">Keterangan foto ketiga.</small></div>
         </article>
       </div>
     </div>
@@ -841,7 +932,7 @@ footer{border-top:1px solid var(--line);margin-top:40px}
     <div>
       <a href="#home" class="brand"><span class="mark">MD</span>Defval</a>
       <p style="margin-top:8px">Industrial Informatics &amp; Automation</p>
-      <p style="margin-top:4px;font-size:11px" data-i18n="footer.updated">Diperbarui terakhir: September 2026</p>
+      <p style="margin-top:4px;font-size:11px" data-i18n="footer.updated">Diperbarui terakhir: Oktober 2026</p>
     </div>
     <div class="foot-links">
       <a href="mailto:defvalnahdan@gmail.com">Email</a>
@@ -864,8 +955,8 @@ const translations = {
   id: {
     skip: "Langsung ke konten",
     "nav.home": "Home", "nav.about": "Tentang", "nav.skills": "Keahlian",
-    "nav.internship": "Magang", "nav.projects": "Proyek", "nav.education": "Pendidikan",
-    "nav.publications": "Publikasi",
+    "nav.internship": "Magang", "nav.projects": "Proyek", "nav.activities": "Kegiatan",
+    "nav.education": "Pendidikan", "nav.publications": "Publikasi",
     "nav.contact": "Kontak", "nav.cta": "Hubungi saya",
     "hero.photo_alt": "Foto Muhammad Defval Andika Saripudin",
     "hero.badge": "Siap magang & kolaborasi proyek",
@@ -880,7 +971,7 @@ const translations = {
     "about.photo_alt": "Defval saat bekerja",
     "about.eyebrow": "Tentang saya",
     "about.body1": "Mahasiswa Politeknik Manufaktur Negeri Bandung, Jurusan Teknik Otomasi Manufaktur dan Mekatronika, Program Studi D4 Teknologi Rekayasa Informatika Industri.",
-    "about.body2": "Fokus saya ada di titik temu antara perangkat keras dan perangkat lunak: sensor dan PLC di lapangan, lalu datanya diolah dan ditampilkan lewat dashboard yang mudah dibaca operator. Terbiasa menangani konfigurasi Mikrotik, pengkabelan LAN, pengelolaan server, dan network monitoring.",
+    "about.body2": "Fokus saya ada di titik temu antara perangkat keras dan perangkat lunak: sensor dan PLC di lapangan, lalu datanya diolah dan ditampilkan lewat dashboard yang mudah dibaca operator. Terbiasa menangani konfigurasi MikroTik, pengkabelan LAN, pengelolaan server, dan network monitoring.",
     "about.body3": "Untuk sisi data, saya memakai Python dan SQL, termasuk penerapan machine learning dan computer vision untuk inspeksi kualitas dan sistem cerdas lainnya.",
     "about.btn": "Lihat rekam jejak",
     "about.info1_b": "D4 Informatika Industri",
@@ -900,7 +991,7 @@ const translations = {
     "skills.svc1_h": "Internet of Things", "skills.svc1_p": "Sensor, LoRa, Arduino, dan Raspberry Pi untuk akuisisi data jarak jauh.",
     "skills.svc2_h": "Computer Vision", "skills.svc2_p": "Deteksi dan klasifikasi objek dengan YOLO dan OpenCV untuk inspeksi kualitas.",
     "skills.svc3_h": "Otomasi Industri", "skills.svc3_p": "Pemrograman PLC Omron, kendali motor, dan simulasi proses produksi.",
-    "skills.svc4_h": "Jaringan Komputer", "skills.svc4_p": "Konfigurasi Mikrotik, pengkabelan LAN, pengelolaan server, dan monitoring.",
+    "skills.svc4_h": "Jaringan Komputer", "skills.svc4_p": "Konfigurasi MikroTik, pengkabelan LAN, pengelolaan server, dan monitoring.",
     "skills.svc5_h": "Machine Learning", "skills.svc5_p": "Pengolahan data dan pemodelan dengan Python untuk mendukung sistem cerdas.",
     "skills.svc6_h": "Web Development", "skills.svc6_p": "Dashboard dan aplikasi web dengan HTML, CSS, JavaScript, dan Node-RED.",
     "chips.eyebrow": "Tools yang saya pakai",
@@ -925,7 +1016,7 @@ const translations = {
     "internship.g3_b": "Kegiatan harian", "internship.g3_small": "Proses pengujian sistem dan kegiatan sehari-hari di lapangan.",
     "projects.eyebrow": "Proyek terpilih",
     "projects.h2": "Belajar yang berujung <span>jadi sistem</span>",
-    "projects.p": "Dua belas proyek dari perkuliahan dan eksplorasi pribadi, mencakup IoT, otomasi, machine learning, sampai jaringan.",
+    "projects.p": "Enam belas proyek dari perkuliahan dan eksplorasi pribadi, mencakup IoT, otomasi, machine learning, sampai jaringan.",
     "projects.filter_all": "Semua", "projects.filter_otomasi": "Otomasi", "projects.filter_jaringan": "Jaringan",
     "projects.filter_empty": "Belum ada proyek pada kategori ini.",
     "projects.p01_zoom_aria": "Perbesar foto proyek monitoring suhu IoT",
@@ -943,9 +1034,9 @@ const translations = {
     "projects.p05_zoom_aria": "Perbesar foto web bengkel Merdeka Motor",
     "projects.p05_h": "Pembuatan Web Profile Bengkel Merdeka Motor Garut",
     "projects.p05_p": "Membangun situs web profil profesional menggunakan HTML, CSS, dan JavaScript untuk menampilkan layanan serta informasi bengkel.",
-    "projects.p06_zoom_aria": "Perbesar foto konfigurasi Mikrotik hotspot",
-    "projects.p06_h": "Pengkonfigurasian Mikrotik Menggunakan Winbox sebagai Hotspot Center Berbayar",
-    "projects.p06_p": "Melakukan konfigurasi Mikrotik Router menggunakan Winbox untuk menyediakan layanan hotspot berbayar di wilayah Antapani, Bandung.",
+    "projects.p06_zoom_aria": "Perbesar foto konfigurasi MikroTik hotspot",
+    "projects.p06_h": "Pengkonfigurasian MikroTik Menggunakan WinBox sebagai Hotspot Center Berbayar",
+    "projects.p06_p": "Melakukan konfigurasi MikroTik Router menggunakan WinBox untuk menyediakan layanan hotspot berbayar di wilayah Antapani, Bandung.",
     "projects.p07_zoom_aria": "Perbesar foto aplikasi tebak huruf hijaiyah dan smart factory",
     "projects.p07_h": "Aplikasi 3D Tebak Huruf Hijaiyah dan Smart Factory Berbasis Arduino & Unity",
     "projects.p07_p": "Pengembangan aplikasi edukasi interaktif 3D serta simulasi Smart Factory yang mengintegrasikan Arduino dan Unity untuk monitoring dan kontrol otomatis.",
@@ -964,6 +1055,31 @@ const translations = {
     "projects.p12_zoom_aria": "Perbesar foto web smart farm peternakan",
     "projects.p12_h": "Web Smart Farm Peternakan",
     "projects.p12_p": "Dashboard peternakan berbasis IoT yang memantau kondisi kandang secara real-time dan memakai computer vision serta machine learning untuk deteksi dini kondisi ternak.",
+    "projects.p13_zoom_aria": "Perbesar foto teaching robot arm virtual reality",
+    "projects.p13_h": "Teaching Robot Arm by Virtual Reality",
+    "projects.p13_p": "Sistem pengajaran lengan robot (robot arm) melalui virtual reality, sehingga gerakan robot dapat dipelajari dan dikendalikan secara interaktif dalam lingkungan virtual.",
+    "projects.p14_zoom_aria": "Perbesar foto sistem CMMS",
+    "projects.p14_h": "Sistem CMMS (Computerized Maintenance Management System)",
+    "projects.p14_p": "Sistem manajemen perawatan mesin berbasis komputer untuk mencatat jadwal maintenance, riwayat perbaikan, dan kondisi aset secara terpusat.",
+    "projects.p15_zoom_aria": "Perbesar foto sistem lampu taman otomatis LabVIEW",
+    "projects.p15_h": "Sistem Lampu Taman Otomatis Menggunakan LabVIEW",
+    "projects.p15_p": "Merancang sistem lampu taman otomatis dengan LabVIEW yang menyalakan dan mematikan lampu secara otomatis serta menampilkan statusnya pada antarmuka.",
+    "projects.p16_zoom_aria": "Perbesar foto sistem ERP Odoo",
+    "projects.p16_h": "Sistem ERP Berbasis Odoo",
+    "projects.p16_p": "Implementasi sistem Enterprise Resource Planning berbasis Odoo untuk mengintegrasikan proses bisnis dalam satu platform terpadu.",
+    "activities.eyebrow": "Kegiatan & seminar",
+    "activities.h2": "Keikutsertaan dalam <span>kegiatan</span>",
+    "activities.p": "Seminar, workshop, dan kegiatan pengembangan diri di luar perkuliahan.",
+    "activities.a1_badge": "Kegiatan",
+    "activities.a1_meta": "Tanggal & lokasi kegiatan",
+    "activities.a1_h": "Hilirisasi Produk Teaching Aid Otomasi Dengan Machine Vision Dan Virtual Reality",
+    "activities.a1_p": "Dokumentasi keikutsertaan dalam kegiatan hilirisasi produk teaching aid otomasi yang memadukan machine vision dan virtual reality.",
+    "activities.g1_zoom_aria": "Perbesar foto kegiatan 1", "activities.g1_alt": "Dokumentasi kegiatan hilirisasi teaching aid 1",
+    "activities.g1_b": "Dokumentasi 1", "activities.g1_small": "Keterangan foto pertama.",
+    "activities.g2_zoom_aria": "Perbesar foto kegiatan 2", "activities.g2_alt": "Dokumentasi kegiatan hilirisasi teaching aid 2",
+    "activities.g2_b": "Dokumentasi 2", "activities.g2_small": "Keterangan foto kedua.",
+    "activities.g3_zoom_aria": "Perbesar foto kegiatan 3", "activities.g3_alt": "Dokumentasi kegiatan hilirisasi teaching aid 3",
+    "activities.g3_b": "Dokumentasi 3", "activities.g3_small": "Keterangan foto ketiga.",
     "education.eyebrow": "Pendidikan & pencapaian",
     "education.h2": "Di balik dan di luar <span>teknologi</span>",
     "education.card1_when": "Agustus 2023 — sekarang",
@@ -994,7 +1110,7 @@ const translations = {
     "contact.form_email": "Email",
     "contact.form_message": "Pesan", "contact.form_message_ph": "Tulis pesan kamu...",
     "contact.form_submit": "Kirim via WhatsApp",
-    "footer.updated": "Diperbarui terakhir: September 2026",
+    "footer.updated": "Diperbarui terakhir: Oktober 2026",
     "footer.to_top_aria": "Kembali ke atas",
     "lightbox.close_aria": "Tutup pratinjau",
     "js.form_incomplete": "Mohon lengkapi semua kolom sebelum mengirim.",
@@ -1006,8 +1122,8 @@ const translations = {
   en: {
     skip: "Skip to content",
     "nav.home": "Home", "nav.about": "About", "nav.skills": "Skills",
-    "nav.internship": "Internship", "nav.projects": "Projects", "nav.education": "Education",
-    "nav.publications": "Publications",
+    "nav.internship": "Internship", "nav.projects": "Projects", "nav.activities": "Activities",
+    "nav.education": "Education", "nav.publications": "Publications",
     "nav.contact": "Contact", "nav.cta": "Contact me",
     "hero.photo_alt": "Photo of Muhammad Defval Andika Saripudin",
     "hero.badge": "Open to internships & project collaboration",
@@ -1022,7 +1138,7 @@ const translations = {
     "about.photo_alt": "Defval at work",
     "about.eyebrow": "About me",
     "about.body1": "Student at Politeknik Manufaktur Negeri Bandung, Manufacturing Automation & Mechatronics Engineering Department, D4 Industrial Informatics Engineering program.",
-    "about.body2": "My focus sits at the intersection of hardware and software: sensors and PLCs on the field, with the data processed and shown on dashboards operators can read easily. Comfortable handling Mikrotik configuration, LAN cabling, server management, and network monitoring.",
+    "about.body2": "My focus sits at the intersection of hardware and software: sensors and PLCs on the field, with the data processed and shown on dashboards operators can read easily. Comfortable handling MikroTik configuration, LAN cabling, server management, and network monitoring.",
     "about.body3": "On the data side, I use Python and SQL, including applying machine learning and computer vision for quality inspection and other smart systems.",
     "about.btn": "See track record",
     "about.info1_b": "D4 Industrial Informatics",
@@ -1042,7 +1158,7 @@ const translations = {
     "skills.svc1_h": "Internet of Things", "skills.svc1_p": "Sensors, LoRa, Arduino, and Raspberry Pi for remote data acquisition.",
     "skills.svc2_h": "Computer Vision", "skills.svc2_p": "Object detection and classification with YOLO and OpenCV for quality inspection.",
     "skills.svc3_h": "Industrial Automation", "skills.svc3_p": "Omron PLC programming, motor control, and production process simulation.",
-    "skills.svc4_h": "Computer Networking", "skills.svc4_p": "Mikrotik configuration, LAN cabling, server management, and monitoring.",
+    "skills.svc4_h": "Computer Networking", "skills.svc4_p": "MikroTik configuration, LAN cabling, server management, and monitoring.",
     "skills.svc5_h": "Machine Learning", "skills.svc5_p": "Data processing and modeling with Python to power smart systems.",
     "skills.svc6_h": "Web Development", "skills.svc6_p": "Dashboards and web apps with HTML, CSS, JavaScript, and Node-RED.",
     "chips.eyebrow": "Tools I use",
@@ -1067,7 +1183,7 @@ const translations = {
     "internship.g3_b": "Daily activities", "internship.g3_small": "System testing process and day-to-day activities in the field.",
     "projects.eyebrow": "Selected projects",
     "projects.h2": "Learning that turns <span>into systems</span>",
-    "projects.p": "Twelve projects from coursework and personal exploration, covering IoT, automation, machine learning, and networking.",
+    "projects.p": "Sixteen projects from coursework and personal exploration, covering IoT, automation, machine learning, and networking.",
     "projects.filter_all": "All", "projects.filter_otomasi": "Automation", "projects.filter_jaringan": "Networking",
     "projects.filter_empty": "No projects in this category yet.",
     "projects.p01_zoom_aria": "Enlarge IoT temperature monitoring project photo",
@@ -1085,9 +1201,9 @@ const translations = {
     "projects.p05_zoom_aria": "Enlarge Merdeka Motor workshop website photo",
     "projects.p05_h": "Merdeka Motor Garut Workshop Profile Website",
     "projects.p05_p": "Built a professional profile website using HTML, CSS, and JavaScript to showcase the workshop's services and information.",
-    "projects.p06_zoom_aria": "Enlarge Mikrotik hotspot configuration photo",
-    "projects.p06_h": "Configuring Mikrotik via Winbox as a Paid Hotspot Center",
-    "projects.p06_p": "Configured a Mikrotik Router via Winbox to provide paid hotspot service in the Antapani area of Bandung.",
+    "projects.p06_zoom_aria": "Enlarge MikroTik hotspot configuration photo",
+    "projects.p06_h": "Configuring MikroTik via WinBox as a Paid Hotspot Center",
+    "projects.p06_p": "Configured a MikroTik Router via WinBox to provide paid hotspot service in the Antapani area of Bandung.",
     "projects.p07_zoom_aria": "Enlarge Hijaiyah letter guessing app and smart factory photo",
     "projects.p07_h": "3D Hijaiyah Letter Guessing App and Smart Factory Based on Arduino & Unity",
     "projects.p07_p": "Developed an interactive 3D educational app and a Smart Factory simulation integrating Arduino and Unity for automatic monitoring and control.",
@@ -1106,6 +1222,31 @@ const translations = {
     "projects.p12_zoom_aria": "Enlarge Smart Farm livestock website photo",
     "projects.p12_h": "Smart Farm Livestock Web Dashboard",
     "projects.p12_p": "An IoT-based farm dashboard that monitors coop conditions in real time and uses computer vision and machine learning for early detection of livestock condition.",
+    "projects.p13_zoom_aria": "Enlarge Teaching Robot Arm by Virtual Reality photo",
+    "projects.p13_h": "Teaching Robot Arm by Virtual Reality",
+    "projects.p13_p": "A system for teaching robot arm operation through virtual reality, so robot movements can be learned and controlled interactively in a virtual environment.",
+    "projects.p14_zoom_aria": "Enlarge CMMS photo",
+    "projects.p14_h": "CMMS (Computerized Maintenance Management System)",
+    "projects.p14_p": "A computerized maintenance management system to centrally record maintenance schedules, repair history, and asset condition.",
+    "projects.p15_zoom_aria": "Enlarge LabVIEW automatic garden light photo",
+    "projects.p15_h": "Automatic Garden Light System Using LabVIEW",
+    "projects.p15_p": "Designed an automatic garden light system in LabVIEW that switches lights on and off automatically and shows their status on the interface.",
+    "projects.p16_zoom_aria": "Enlarge Odoo ERP system photo",
+    "projects.p16_h": "Odoo-Based ERP System",
+    "projects.p16_p": "Implemented an Odoo-based Enterprise Resource Planning system to integrate business processes into one unified platform.",
+    "activities.eyebrow": "Activities & seminars",
+    "activities.h2": "Participation in <span>activities</span>",
+    "activities.p": "Seminars, workshops, and self-development activities outside of coursework.",
+    "activities.a1_badge": "Activity",
+    "activities.a1_meta": "Event date & location",
+    "activities.a1_h": "Commercialization of Automation Teaching Aid Products Using Machine Vision and Virtual Reality",
+    "activities.a1_p": "Documentation of participation in an activity on commercializing automation teaching aid products that combine machine vision and virtual reality.",
+    "activities.g1_zoom_aria": "Enlarge activity photo 1", "activities.g1_alt": "Teaching aid commercialization activity documentation 1",
+    "activities.g1_b": "Documentation 1", "activities.g1_small": "Caption for the first photo.",
+    "activities.g2_zoom_aria": "Enlarge activity photo 2", "activities.g2_alt": "Teaching aid commercialization activity documentation 2",
+    "activities.g2_b": "Documentation 2", "activities.g2_small": "Caption for the second photo.",
+    "activities.g3_zoom_aria": "Enlarge activity photo 3", "activities.g3_alt": "Teaching aid commercialization activity documentation 3",
+    "activities.g3_b": "Documentation 3", "activities.g3_small": "Caption for the third photo.",
     "education.eyebrow": "Education & achievements",
     "education.h2": "Behind and beyond <span>technology</span>",
     "education.card1_when": "August 2023 — present",
@@ -1136,7 +1277,7 @@ const translations = {
     "contact.form_email": "Email",
     "contact.form_message": "Message", "contact.form_message_ph": "Write your message...",
     "contact.form_submit": "Send via WhatsApp",
-    "footer.updated": "Last updated: September 2026",
+    "footer.updated": "Last updated: October 2026",
     "footer.to_top_aria": "Back to top",
     "lightbox.close_aria": "Close preview",
     "js.form_incomplete": "Please fill in all fields before sending.",
@@ -1147,7 +1288,12 @@ const translations = {
   }
 };
 
-let currentLang = localStorage.getItem('site-lang') || 'id';
+/* localStorage aman untuk mode privat / diblokir */
+function safeGet(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+function safeSet(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+
+let currentLang = safeGet('site-lang');
+if (!translations[currentLang]) currentLang = 'id';
 
 function applyLanguage(lang){
   const dict = translations[lang] || translations.id;
@@ -1179,8 +1325,11 @@ function applyLanguage(lang){
   document.querySelectorAll('.lang-toggle span').forEach(s=>{
     s.classList.toggle('active', s.getAttribute('data-lang-btn') === lang);
   });
+  document.querySelectorAll('.lang-toggle').forEach(b=>{
+    b.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+  });
   currentLang = lang;
-  localStorage.setItem('site-lang', lang);
+  safeSet('site-lang', lang);
 }
 
 function toggleLanguage(){
@@ -1265,7 +1414,7 @@ lightboxClose.addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox(); });
 
-/* ---------- FILTER PROYEK ---------- */
+/* ---------- FILTER PROYEK (mendukung banyak kategori per kartu) ---------- */
 const filterRow = document.getElementById('filterRow');
 const projGrid = document.getElementById('projGrid');
 const filterEmpty = document.getElementById('filterEmpty');
@@ -1279,7 +1428,7 @@ if (filterRow && projGrid) {
     const cat = btn.dataset.filter;
     let visible = 0;
     cards.forEach(card => {
-      const match = cat === 'all' || card.dataset.cat === cat;
+      const match = cat === 'all' || card.dataset.cat.split(' ').includes(cat);
       card.hidden = !match;
       if (match) visible++;
     });
